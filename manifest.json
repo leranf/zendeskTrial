@@ -1,9 +1,9 @@
 {
   "name": "Nasa App",
   "author": {
-    "name": "Leran Firer",
+    "name": "Leran J Firer",
     "email": "leranf@gmail.com",
-    "url": "https://www.nasa.gov"
+    "url": ""
   },
   "defaultLocale": "en",
   "private": true,

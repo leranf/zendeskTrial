@@ -3,8 +3,8 @@
   <h3>{{setting "name"}}</h3>
 </header>
 <section data-main></section>
-<footer>
+<div id='bug_link'>
   <a href="mailto:{{author.email}}">
-    {{author.name}}
+    Report Bugs
   </a>
-</footer>
+</div>
