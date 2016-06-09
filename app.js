@@ -2,8 +2,8 @@
 
   return {
     events: {
-      'userGetRequest.done': 'this.showInfo',
-      'userGetRequest.fail': 'this.showError',
+      'userGetRequest.done': 'showInfo',
+      'userGetRequest.fail': 'showError',
       'app.activated':'getInfo'
     },
 
@@ -39,12 +39,13 @@
     },
 
     showInfo: function(data) {
+      this.formatDates(data);
       if (data.user.organization_id === null) {
+        this.switchTo('requester', data);
       } else {
         this.ajax('orgGetRequest', data.user.organization_id).then(
           function(org_data) {
             data.user.organization_name = org_data.organization.name;
-            this.formatDates(data);
             this.switchTo('requester', data);
           },
           function() {
