@@ -2,10 +2,11 @@
 
   return {
     events: {
-      'app.activated':'doSomething'
+      'app.activated':'showInfo'
     },
 
-    doSomething: function() {
+    showInfo: function() {
+      this.switchTo('requester');
     }
   };
 
