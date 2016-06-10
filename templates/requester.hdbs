@@ -1,18 +1,66 @@
-<table>
-  <tr>
-    <td>Profile:</td>
-    <td class="data"><a href="../../users/{{user.id}}" target="_blank">{{user.name}}</a></td>
-  </tr>
-  <tr>
-    <td>Organization:</td>
-    <td class="data">{{user.organization_name}}</td>
-  </tr>
-  <tr>
-    <td>Added:</td>
-    <td class="data">{{user.created_at}}</td>
-  </tr>
-  <tr>
-    <td>Last signed in:</td>
-    <td class="data">{{user.last_login_at}}</td>
-  </tr>
-</table>
+<div class="container"> 
+  <div class="selectedPhoto">
+    <img src="{{selected}}">
+  </div>
+  <table class="calendar">
+    <tr class="monthAndYear">
+      <td><button class="prev">Prev</button></td>
+      <td>{{month}} {{year}}</td>
+      <td><button class="next">Next</button></td>
+    </tr>
+    <tr class="weekDays">
+      <td>Sun</td>
+      <td>Mon</td>
+      <td>Tue</td>
+      <td>Wed</td>
+      <td>Thu</td>
+      <td>Fri</td>
+      <td>Sat</td>
+    </tr>
+    <tr class="weekOne">
+      <td><img class="nasaImage" src="{{calendar00}}"></td>
+      <td><img class="nasaImage" src="{{calendar01}}"></td>
+      <td><img class="nasaImage" src="{{calendar02}}"></td>
+      <td><img class="nasaImage" src="{{calendar03}}"></td>
+      <td><img class="nasaImage" src="{{calendar04}}"></td>
+      <td><img class="nasaImage" src="{{calendar05}}"></td>
+      <td><img class="nasaImage" src="{{calendar06}}"></td>
+    </tr>
+    <tr class="weekTwo">
+      <td><img class="nasaImage" src="{{calendar10}}"></td>
+      <td><img class="nasaImage" src="{{calendar11}}"></td>
+      <td><img class="nasaImage" src="{{calendar12}}"></td>
+      <td><img class="nasaImage" src="{{calendar13}}"></td>
+      <td><img class="nasaImage" src="{{calendar14}}"></td>
+      <td><img class="nasaImage" src="{{calendar15}}"></td>
+      <td><img class="nasaImage" src="{{calendar16}}"></td>
+    </tr>
+    <tr class="weekThree">
+      <td><img class="nasaImage" src="{{calendar20}}"></td>
+      <td><img class="nasaImage" src="{{calendar21}}"></td>
+      <td><img class="nasaImage" src="{{calendar22}}"></td>
+      <td><img class="nasaImage" src="{{calendar23}}"></td>
+      <td><img class="nasaImage" src="{{calendar24}}"></td>
+      <td><img class="nasaImage" src="{{calendar25}}"></td>
+      <td><img class="nasaImage" src="{{calendar26}}"></td>
+    </tr>
+    <tr class="weekFour">
+      <td><img class="nasaImage" src="{{calendar30}}"></td>
+      <td><img class="nasaImage" src="{{calendar31}}"></td>
+      <td><img class="nasaImage" src="{{calendar32}}"></td>
+      <td><img class="nasaImage" src="{{calendar33}}"></td>
+      <td><img class="nasaImage" src="{{calendar34}}"></td>
+      <td><img class="nasaImage" src="{{calendar35}}"></td>
+      <td><img class="nasaImage" src="{{calendar36}}"></td>
+    </tr>
+    <tr class="weekFive">
+      <td><img class="nasaImage" src="{{calendar40}}"></td>
+      <td><img class="nasaImage" src="{{calendar41}}"></td>
+      <td><img class="nasaImage" src="{{calendar42}}"></td>
+      <td><img class="nasaImage" src="{{calendar43}}"></td>
+      <td><img class="nasaImage" src="{{calendar44}}"></td>
+      <td><img class="nasaImage" src="{{calendar45}}"></td>
+      <td><img class="nasaImage" src="{{calendar46}}"></td>
+    </tr>
+  </table>
+</div>
