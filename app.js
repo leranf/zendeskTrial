@@ -126,7 +126,6 @@
     organizeInCalendar: function(photos) {
       var str = String(this.currentDate.month) + ' 01 ' + String(this.currentDate.year);
       var firstDay = new Date(str).getDay();
-      console.log('FIRST DAY', firstDay);
       var calendar = [
         [undefined, undefined, undefined, undefined, undefined, undefined, undefined],
         [undefined, undefined, undefined, undefined, undefined, undefined, undefined],
@@ -158,7 +157,6 @@
     },
 
     prevMonth: function() {
-      console.log('PREVIOUS MONTH INVOKED!')
       var year = this.currentDate.year;
       var month = this.currentDate.month;
       if (month > 1) {
@@ -173,7 +171,6 @@
     },
 
     nextMonth: function() {
-      console.log('NEXT MONTH INVOKED!')
       var year = this.currentDate.year;
       var month = this.currentDate.month;
       if (month < 12) {
