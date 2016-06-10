@@ -2,14 +2,14 @@
   position: absolute;
   left: 0;
   height: 200px;
-  width: 50%;
+  width: 40%;
 }
 
 .calendar {
   position: absolute;
   right: 0;
   height: 200px;
-  width: 50%;
+  width: 60%;
 }
 
 .nasaImage {
