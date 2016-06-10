@@ -126,6 +126,7 @@
     organizeInCalendar: function(photos) {
       var str = String(this.currentDate.month) + ' 01 ' + String(this.currentDate.year);
       var firstDay = new Date(str).getDay();
+      console.log('FIRST DAY', firstDay);
       var calendar = [
         [undefined, undefined, undefined, undefined, undefined, undefined, undefined],
         [undefined, undefined, undefined, undefined, undefined, undefined, undefined],
@@ -136,6 +137,11 @@
 
       var col = firstDay;
       var day = 1;
+      var i = 0;
+      while (i < firstDay) {
+        this.calendarPhotos['calendar0' + i++] = undefined; 
+      }
+
       while (col < 7) {
         calendar[0][col++] = photos[day++];
         this.calendarPhotos['calendar0' + (col-1)] = calendar[0][col-1];
