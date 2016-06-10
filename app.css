@@ -1,9 +1,23 @@
-#bug_link {
-  font-size: 80%;
-  padding-top: 10px;
+.selectedPhoto {
+  position: absolute;
+  left: 0;
+  height: 200px;
+  width: 50%;
 }
 
-.data {
-  color: #363;
-  padding-left: 6px;
+.calendar {
+  position: absolute;
+  right: 0;
+  height: 200px;
+  width: 50%;
+}
+
+.nasaImage {
+  position: absolute;
+  height: 40px;
+  width: 14%;
+}
+
+.monthAndYear {
+  text-align: center;
 }
