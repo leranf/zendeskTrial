@@ -99,26 +99,28 @@
       var showInfo = this.showInfo.bind(this);
       var organizeInCalendar = this.organizeInCalendar.bind(this);
 
+      function apiRequests(i) { 
+        var currDay = String(i).length < 2 ? '0' + String(i) : String(i);
+        var currDate = currYear + '-' + currMonth + '-' + currDay;
+        getPhotoForDate('nasaGetRequest', currDate)
+          .done(function(data) {
+            photosOfMonth[i] = data.hdurl;
+            count++;
+            if (count === daysInMonth) {
+              organizeInCalendar(photosOfMonth);
+            }
+          })
+          .fail(function(err) {
+            photosOfMonth[i] = undefined;
+            count++;
+            if (count === daysInMonth) {
+              organizeInCalendar(photosOfMonth);
+            }
+          });
+      }
+
       for (var i = 1; i <= daysInMonth; i++) {
-        (function(i) { 
-          var currDay = String(i).length < 2 ? '0' + String(i) : String(i);
-          var currDate = currYear + '-' + currMonth + '-' + currDay;
-          getPhotoForDate('nasaGetRequest', currDate)
-            .done(function(data) {
-              photosOfMonth[i] = data.hdurl;
-              count++;
-              if (count === daysInMonth) {
-                organizeInCalendar(photosOfMonth);
-              }
-            })
-            .fail(function(err) {
-              photosOfMonth[i] = undefined;
-              count++;
-              if (count === daysInMonth) {
-                organizeInCalendar(photosOfMonth);
-              }
-            });
-        })(i);
+        apiRequests(i);
       }
 
     },
@@ -136,9 +138,9 @@
 
       var col = firstDay;
       var day = 1;
-      var i = 0;
-      while (i < firstDay) {
-        this.calendarPhotos['calendar0' + i++] = undefined; 
+      var notADay = 0;
+      while (notADay < firstDay) {
+        this.calendarPhotos['calendar0' + notADay++] = undefined; 
       }
 
       while (col < 7) {
