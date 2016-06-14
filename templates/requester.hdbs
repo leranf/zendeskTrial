@@ -4,9 +4,11 @@
   </div>
   <table class="calendar">
     <tr class="monthAndYear">
-      <td><button class="prev">Prev</button></td>
-      <td>{{month}} {{year}}</td>
-      <td><button class="next">Next</button></td>
+      <td colspan="7">
+        <button class="prev">Prev</button>
+        {{month}} {{year}}
+        <button class="next">Next</button>
+      </td>
     </tr>
     <tr class="weekDays">
       <td>Sun</td>

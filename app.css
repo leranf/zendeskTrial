@@ -7,6 +7,7 @@
 
 .calendar {
   position: absolute;
+  table-layout: fixed;
   right: 0;
   height: 200px;
   width: 60%;
@@ -14,10 +15,14 @@
 
 .nasaImage {
   position: absolute;
-  height: 40px;
-  width: 14%;
+  max-width: 20px;
+  max-height: 20px;
 }
 
 .monthAndYear {
   text-align: center;
+}
+
+td {
+  width: 20px;
 }
