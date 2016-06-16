@@ -168,6 +168,7 @@
         this.currentDate.year = year - 1;
       }
 
+      this.showInfo();
       this.getPhotosOfMonth({year: this.currentDate.year, month: this.currentDate.month});
 
     },
@@ -182,6 +183,7 @@
         this.currentDate.year = year + 1;
       }
       
+      this.showInfo();
       this.getPhotosOfMonth({year: this.currentDate.year, month: this.currentDate.month});
 
     },
